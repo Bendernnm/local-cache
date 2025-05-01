@@ -1,16 +1,19 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+  ],
   env: {
     node: true,
     es2022: true,
     jest: true,
-  },
-  extends: [
-    'eslint:recommended', // Default recommended ESLint rules
-    'airbnb-base', // Airbnb style guide (optional, but widely used)
-  ],
-  parserOptions: {
-    ecmaVersion: 13, // ECMAScript 2021
-    sourceType: 'module', // Can be 'script' if not using ES modules
   },
   rules: {
     // Custom rules or overrides can be defined here
