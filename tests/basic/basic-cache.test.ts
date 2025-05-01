@@ -1,4 +1,4 @@
-import { BasicCache } from '../../src/basic/index';
+import { BasicCache } from '../../src/basic';
 
 describe('BasicCache', () => {
   let cache: BasicCache<string>;
