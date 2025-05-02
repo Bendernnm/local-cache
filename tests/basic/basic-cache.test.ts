@@ -60,4 +60,20 @@ describe('BasicCache', () => {
 
     expect(cache.getAll()).toEqual(['value1', 'value2']);
   });
+
+  test('should return the correct size of the cache', () => {
+    expect(cache.size()).toBe(0);
+
+    cache.set('key1', 'value1');
+    expect(cache.size()).toBe(1);
+
+    cache.set('key2', 'value2');
+    expect(cache.size()).toBe(2);
+
+    cache.delete('key1');
+    expect(cache.size()).toBe(1);
+
+    cache.clear();
+    expect(cache.size()).toBe(0);
+  });
 });

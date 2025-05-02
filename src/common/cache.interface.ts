@@ -14,4 +14,6 @@ export interface ICache<T> {
   deleteMany(keys: string[]): void;
 
   clear(): void;
+
+  size(): number;
 }

@@ -41,4 +41,8 @@ export class BasicCache<T> implements ICache<T> {
   clear(): void {
     this.storage.clear();
   }
+
+  size(): number {
+    return this.storage.size;
+  }
 }
